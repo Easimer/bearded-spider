@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECA69551-45F5-4B8A-A452-4850AA8B695A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasimerDemoScene</RootNamespace>
+    <AssemblyName>Easimer RPG</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.6.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>EasimerDemoScene.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_raw.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F0393022265065B68CCFD1CDC6A3AA0815E00DE7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EasimEngine_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasimerDRM">
+      <HintPath>..\..\..\..\..\..\..\Assemly libs\EasimerDRM.dll</HintPath>
+    </Reference>
+    <Reference Include="IrrlichtLime">
+      <HintPath>..\..\..\..\..\..\..\Assemly libs\IrrlichtLime.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Compilers">
+      <HintPath>..\packages\Roslyn.1.0.11014.5\lib\net40\Roslyn.Compilers.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Compilers.CSharp">
+      <HintPath>..\packages\Roslyn.1.0.11014.5\lib\net40\Roslyn.Compilers.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Services">
+      <HintPath>..\packages\Roslyn.1.0.11014.5\lib\net40\Roslyn.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Services.CSharp">
+      <HintPath>..\packages\Roslyn.1.0.11014.5\lib\net40\Roslyn.Services.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio.cs" />
+    <Compile Include="ExperienceBar.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Quest.cs" />
+    <Compile Include="Scripting.cs" />
+    <Compile Include="Math.cs" />
+    <Compile Include="MenuScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuScreen.Designer.cs">
+      <DependentUpon>MenuScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods.cs" />
+    <Compile Include="Property.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Graphics.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes.cs" />
+    <Compile Include="Shadow.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="Waiter.cs" />
+    <Compile Include="Yodan.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.10.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ 2010 Runtime Libraries %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EasimEngine.exe.config" />
+    <None Include="EasimEngine_TemporaryKey.pfx" />
+    <None Include="eula.rtf" />
+    <None Include="packages.config" />
+    <None Include="Resources\easimengine controlls1.png" />
+    <None Include="bin\Debug\Content\2D\startBtn.png" />
+    <None Include="bin\Debug\Content\2D\exitBtn.png" />
+    <None Include="bin\Debug\Content\2D\bg1.png" />
+    <None Include="bin\Debug\Content\2D\logo.png" />
+    <None Include="bin\Debug\bg2.png" />
+    <None Include="bin\Debug\Content\2D\bg5.png" />
+    <None Include="bin\Debug\Content\2D\bg3.png" />
+    <None Include="bin\Debug\Content\2D\bg4.png" />
+    <None Include="bin\Debug\Content\2D\bg2.png" />
+    <Content Include="icon_raw.ico" />
+    <None Include="Resources\icon_raw.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MenuScreen.resx">
+      <DependentUpon>MenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
